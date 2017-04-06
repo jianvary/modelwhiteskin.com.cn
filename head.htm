@@ -1,0 +1,83 @@
+<script src="/templets/pc/js/jquery.min.js"></script>
+<script>
+function dropMenu(obj){
+    $(obj).each(function(){
+      var theSpan = $(this);
+      var theMenu = theSpan.find(".submenu");
+      var tarHeight = theMenu.height();
+      theMenu.css({height:0,opacity:0});
+      var t1;
+      function expand() {
+        clearTimeout(t1);
+        theSpan.find('a').addClass("selected");
+        theMenu.stop().show().animate({height:tarHeight,opacity:1},200);
+      }
+      function collapse() {
+        clearTimeout(t1);
+        t1 = setTimeout(function(){
+          theSpan.find('a').removeClass("selected");
+          theMenu.stop().animate({height:0,opacity:0},200,function(){
+            $(this).css({display:"none"});
+          });
+        }, 250);
+      }
+      theSpan.hover(expand, collapse);
+      theMenu.hover(expand, collapse);
+    });
+  }
+$(document).ready(function(){
+  dropMenu(".drop-menu-effect");
+});
+</script>
+
+<div class="cont menu">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/"><img src="/templets/pc/images/logo.png" /></a>
+        </div>
+        <div class="daoHang">
+            <div class="nav">
+              <ul class="nav_list">
+                <li class="drop-menu-effect">
+                  <a href='/'>首页</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/about/' >关于白芙素</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/news/' >新闻动态</a>
+                  <ul class="submenu" style="margin-left: -16px;">
+                    <li>
+                      <a href='/news/pinpaibaodao/' >品牌报道</a>
+                    </li>
+                    <li>
+                      <a href='/news/xinpinshangshi' >新品上市</a>
+                    </li>
+                    <li>
+                      <a href='/news/hulichangshi' >护理常识</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/produt/' >产品展示</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/success/' >成功案例</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/daili/' >化妆品代理</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/OEM/' >OEM/ODM</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/jiagongliucheng/' >加工流程</a>
+                </li>
+                <li class="drop-menu-effect">
+                  <a href='/contact/' >联系我们</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div> 
+</div>

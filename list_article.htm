@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont">
+    <div class="wrap">
+        <div class="contentPage marginTopBottom20">
+            <div class="left">
+                <div class="nav">
+                    <p> 
+                        {dede:field name='position'/}
+                    </p>
+                </div>
+                <div class="list">
+                	<ul class="listUl">
+                		{dede:list pagesize='10'}
+                		<li> 
+                			<div class="leftt">
+                				[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' ><img src='{@me['litpic']}'/></a>"); [/field:array]
+                			</div>
+                			<div class="rightt">
+                 				[<b>[field:typelink/]</b>] 
+                 				<a href="[field:arcurl/]" >[field:title/]</a> 
+                 				<span class="info"> 
+                 					<small>日期：</small>[field:pubdate function="GetDateTimeMK(@me)"/] 
+                 					<small>点击：</small>[field:click/]  
+                 				</span>
+                 				<p class="intro"> [field:description/]... </p>
+                 			</div>
+                		</li>
+                		{/dede:list}
+               		</ul>
+                </div>
+                <div class="pages ">
+                	<div class="pageCon">
+		               <ul class="pagelist">
+		                {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+		               </ul>
+              		</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <p>
+                        今日热点
+                    </p>
+                </div>
+                <div class="title">
+                    <ul>
+                        {dede:arclist row='8'  typeid='2,3,4,5,6,8'  titlelen='100'}
+                            <li>
+                                <a href="[field:arcurl/]">[field:title/]</a>
+                            <li>
+                        {/dede:arclist}                     
+                    </ul>
+                </div>
+            </div>
+        </div><!-- contentPage -->
+    </div>
+</div>
+
+{dede:include filename="footNavList.htm"/}
+
+<div class="cont">
+	<div class="wrap">
+		<div class="navTitle80 marginTop20">
+			<p class="title">
+				在线留言
+			</p>
+		</div>
+	</div>
+</div>
+  
+{dede:include filename="liuyan.htm"/}
+
+{dede:include filename="footer.htm"/}
+
+</body>  
+</html>
+

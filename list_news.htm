@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont">
+	<div class="wrap marginTop20 width1230Auto "> 
+		<div class="newsSubUl height50">
+			<div class="top height50">
+				<p class="height50">
+					品牌报道
+				</p>
+			</div>
+			<div class="middle marginTop20">
+				{dede:arclist typeid="13" type="image." row="1"}
+				<p>
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+					</a>
+				</p>
+				{/dede:arclist}
+			</div>
+			<div class="bottom marginTop10">
+				<ul>
+					{dede:arclist typeid="13" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="newsSubUl height50">
+			<div class="top height50">
+				<p class="height50">
+					新品上市
+				</p>
+			</div>
+			<div class="middle marginTop20">
+				{dede:arclist typeid="14" type="image." row="1"}
+				<p>
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+					</a>
+				</p>
+				{/dede:arclist}
+			</div>
+			<div class="bottom marginTop10">
+				<ul>
+					{dede:arclist typeid="14" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="newsSubUl height50">
+			<div class="top height50">
+				<p class="height50">
+					护理知识
+				</p>
+			</div>
+			<div class="middle marginTop20">
+				{dede:arclist typeid="15" type="image." row="1"}
+				<p>
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+					</a>
+				</p>
+				{/dede:arclist}
+			</div>
+			<div class="bottom marginTop10">
+				<ul>
+					{dede:arclist typeid="15" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{dede:include filename="footNavList.htm"/}
+
+<div class="cont">
+	<div class="wrap">
+		<div class="navTitle80 marginTop20">
+			<p class="title">
+				在线留言
+			</p>
+		</div>
+	</div>
+</div>
+ 
+{dede:include filename="liuyan.htm"/}
+  
+{dede:include filename="footer.htm"/}
+
+</body>  
+</html>
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont">
+	<div class="wrap">
+		<div class="miaoBianFont">
+			<span class="redAndWhite">SUCCESS</span> <span class="greenAndWhite">CASE</span>
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="xianBg">
+			成功案例
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="successTu">
+			{dede:arclist typeid="4" type="image." row="3"}
+			<div class="con">
+				<div class="img">
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+						[field:image /]
+					</a>
+				</div>
+				<div class="tuLogo">
+					<img src="/templets/pc/images/successTu.png">
+				</div>
+			</div>
+			{/dede:arclist}
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap ">
+		<div class="displayTu">
+			<img src="/templets/pc/images/testimg.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="miaoBianFont">
+			<span class="redAndWhite">PRODUCT</span> <span class="greenAndWhite">DISPLAY</span>
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="xianBg">
+			白芙素*产品
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="productImg">
+			<div class="left">
+				{dede:arclist typeid="3" type="image." row="1" flag="h"}
+				<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+				</a>
+				{/dede:arclist}
+			</div>
+			<div class="right">
+				{dede:arclist typeid="3" type="image." row="4"}
+				<p>
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+					</a>
+				</p>
+				{/dede:arclist}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="miaoBianFont">
+			<span class="redAndWhite">BRAND</span> <span class="greenAndWhite">NEWS</span>
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="xianBg">
+			白芙素*动态
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="newsTop">
+			<div class="xian">
+			</div>
+			<div class="title">
+				品牌报道
+			</div>
+			{dede:arclist typeid="13" type="image." row="1"}
+			<div class="img">
+				<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+				</a>
+			</div>
+			{/dede:arclist}
+			<div class="con">
+				<ul>
+					{dede:arclist typeid="13" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="newsTop">
+			<div class="xian">
+			</div>
+			<div class="title">
+				新品上市
+			</div>
+			{dede:arclist typeid="14" type="image." row="1"}
+			<div class="img">
+				<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+				</a>
+			</div>
+			{/dede:arclist}
+			<div class="con">
+				<ul>
+					{dede:arclist typeid="14" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="newsTop">
+			<div class="xian">
+			</div>
+			<div class="title">
+				护理常识
+			</div>
+			{dede:arclist typeid="15" type="image." row="1"}
+			<div class="img">
+				<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+					[field:image /]
+				</a>
+			</div>
+			{/dede:arclist}
+			<div class="con">
+				<ul>
+					{dede:arclist typeid="15" row="5"}
+					<li>
+						<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">[field:title /]</a>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{dede:include filename="footNavList.htm"/}
+
+{dede:include filename="footer.htm"/}
+    
+       
+</body>
+</html>

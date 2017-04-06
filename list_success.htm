@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont">
+	<div class="wrap">
+		<div class="miaoBianFont">
+			<span class="redAndWhite">SUCCESS</span> <span class="greenAndWhite">CASE</span>
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="xianBg">
+			成功案例
+		</div>
+	</div>
+</div>
+
+<div class="cont marginTop20">
+	<div class="wrap">
+		<div class="successTu">
+			{dede:arclist typeid="4" type="image." row="3"}
+			<div class="con">
+				<div class="img">
+					<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+						[field:image /]
+					</a>
+				</div>
+				<div class="tuLogo">
+					<img src="/templets/pc/images/successTu.png">
+				</div>
+			</div>
+			{/dede:arclist}
+		</div>
+	</div>
+</div>
+
+{dede:include filename="footNavList.htm"/}
+
+<div class="cont">
+	<div class="wrap">
+		<div class="navTitle80 marginTop20">
+			<p class="title">
+				在线留言
+			</p>
+		</div>
+	</div>
+</div>
+  
+{dede:include filename="liuyan.htm"/}
+
+{dede:include filename="footer.htm"/}
+
+</body>  
+</html>
+

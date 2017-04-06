@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:field.title/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+ 
+<div class="cont">
+    <div class="wrap">
+        <div class="contentPage marginTopBottom20">
+            <div class="left">
+                <div class="nav">
+                    <p> 
+                        {dede:field name='position'/}
+                    </p>
+                </div>
+                <div class="title">
+                    <p>
+                        {dede:field.title/}
+                    </p>
+                </div>
+                <div class="time"> 
+                    <ul>
+                      <li>时间:</li>
+                      <li>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&nbsp;</li>
+                      <li>来源:</li>
+                      <li>{dede:field.source/}&nbsp;</li>
+                      <li>作者:</li>
+                      <li>{dede:field.writer/}&nbsp;</li>
+                      <li>点击:</li> 
+                      <li>
+                        <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>
+                        次
+                      </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    {dede:field.body/}
+                </div>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <p>
+                        今日热点
+                    </p>
+                </div>
+                <div class="title">
+                    <ul>
+                        {dede:arclist row='8'  typeid='2,3,4,5,6,8'  titlelen='100'}
+                            <li>
+                                <a href="[field:arcurl/]">[field:title/]</a>
+                            <li>
+                        {/dede:arclist}                     
+                    </ul>
+                </div>
+            </div>
+        </div><!-- contentPage -->
+    </div>
+</div>
+    
+{dede:include filename="footer.htm"/} 
+   
+</body>
+</html>
+
